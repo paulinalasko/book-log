@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+@font-face {
+    font-family: "CustomFont";
+    src: url(images/goldleaf-bold-font/Goldleaf.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --font-size-small: 18px;
+    --font-size-medium: 20px;
+    --font-size-title: 65px;
+
+    --color-sidebar: #decdfa;
+    --color-header: #dc8d6d;
+    --bgd-card-color: #ffffff;
+    --color-main: #F8EEE7;
+
+    --box-shadow: 0 0 5px grey;
+    --box-shadow-color: 0 0 5px rgb(234, 234, 184);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+    gap: 20px;
+    font-family: 'Prata', serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+    grid-row: 1/4;
+    height: 100%;
+    padding: 10px;
+    font-size: var(--font-size-small);
+    background-color: var(--color-sidebar);
+}
+
+.form, #checkbox,
+.form>input[type="submit"] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5px;
+    gap: 20px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-left: -30px;
+}
+
+.title {
+    font-size: var(--font-size-title);
+}
+
+.title, .header-bar,
+.book-info {
+    font-family: "CustomFont", serif;
+}
+
+input[type="text"]{
+    appearance: none;
+    border: 0;
+    border-bottom: 2px dotted black;
+    background-color: var(--color-sidebar);
+    width: 40vh;
+    height: 35px;
+}
+
+.checkbox-container, 
+.button-container > input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button-text {
+    appearance: none;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: var(--font-size-small);
+    padding: 14px;
+    width: 190px;
+    height: 50px;
+    background-color: rgb(98, 68, 180);
+    color: white;
+    margin-top: 20px;
+}
+
+.checkbox-container {
+    font-size: 16px;
+}
+/* MAIN-LIBRARY */
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+ .header-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    margin-top: 15px;
+    background-color: var(--color-header);
+    box-shadow: 0 3px 2px -1px rgb(79, 79, 79);
+    font-size: 25px;
+ }
+
+ .books-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100%;
+    font-size: 11px;
+    background-color: var(--color-main);
+    padding: 20px;
+    gap: 40px;
+    line-height: 30px;
+ }
+ 
+ div > .card {
+    position: relative;
+    padding: 30px;
+    background: linear-gradient(to left, var(--bgd-card-color) 97%, #F76C6C 3%);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);;
+ }
+
+ 
+ .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 25px;
+ }
+
+
+
+/* PSEUDO-CLASSES */
+
+.button-text:hover {
+    background-color: rgb(60, 42, 112);;
+}
+
+.card:hover {
+    box-shadow: var(--box-shadow-color);
+}
+
+.delete-btn:hover {
+    transform: scale(1.1);
+}
+
